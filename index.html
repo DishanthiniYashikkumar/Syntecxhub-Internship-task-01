@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velmora | Luxury Resort &amp; Spa</title>
+  <meta name="description" content="Experience refined coastal hospitality, elegant accommodation, and unforgettable stays at Velmora Resort &amp; Spa in Mirissa, Sri Lanka.">
+  <meta name="theme-color" content="#0C2233">
+
+  <!-- Open Graph (link previews on social media) -->
+  <meta property="og:title" content="Velmora Resort &amp; Spa | Where the Ocean Meets Your Soul">
+  <meta property="og:description" content="Boutique coastal stays on Sri Lanka's southern coast.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-resort.jpg">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts: Cormorant Garamond (display) + Manrope (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Load the hero image early, it is the first thing visitors see -->
+  <link rel="preload" as="image" href="assets/images/hero-resort.jpg">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Swap "no-js" for "js" before first paint so scroll-reveal styles only apply when JavaScript runs -->
+  <script>document.documentElement.className = 'js';</script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- ==========================================================
+       SVG ICON SPRITE
+       Every icon is defined once here and reused with <use href="#id">.
+       ========================================================== -->
+  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-logo" viewBox="0 0 40 40">
+      <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M5.5 22c3 0 3-2.4 6.2-2.4s3.2 2.4 6.3 2.4 3.1-2.4 6.2-2.4 3.2 2.4 6.3 2.4 3-2.4 4-2.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M8 27c2.6 0 2.6-2 5.3-2s2.7 2 5.4 2 2.6-2 5.3-2 2.7 2 5.4 2 2.6-2 3-2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".55"/>
+      <circle cx="20" cy="13" r="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 20.5c1.2-3.8 4.3-5.5 8-5.5s6.8 1.7 8 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.7 6.3.9-4.5 4.4 1 6.3L12 17.2l-5.6 2.9 1-6.3-4.5-4.4 6.3-.9z" fill="currentColor"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+
+    <!-- Experience icons -->
+    <symbol id="i-dining" viewBox="0 0 24 24"><path d="M7 3v18M4.5 3v5a2.5 2.5 0 0 0 5 0V3M17 21V3c-2.2 1.2-3.2 4-3.2 7.5H17" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sail" viewBox="0 0 24 24"><path d="M12 3v13M12 4l6.5 11H12M10.5 7L6 15h4.5M3 18h18l-2.2 3H5.2z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path d="M3 17h18M6.5 17a5.5 5.5 0 0 1 11 0M12 5v2.5M5.2 8.2 7 10M18.8 8.2 17 10M2.5 13h2M19.5 13h2M7 20.5h10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+
+    <!-- Facility icons -->
+    <symbol id="i-pool" viewBox="0 0 24 24"><path d="M8 13V4.5a1.5 1.5 0 0 1 3 0M14 13V4.5a1.5 1.5 0 0 1 3 0M8 7.5h6M8 10.5h6M2.5 16c1.8 0 1.8-1.3 3.6-1.3s1.8 1.3 3.6 1.3 1.8-1.3 3.6-1.3 1.8 1.3 3.6 1.3 1.8-1.3 3.6-1.3M2.5 19.8c1.8 0 1.8-1.3 3.6-1.3s1.8 1.3 3.6 1.3 1.8-1.3 3.6-1.3 1.8 1.3 3.6 1.3 1.8-1.3 3.6-1.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-cloche" viewBox="0 0 24 24"><path d="M2.5 18h19M4.5 18a7.5 7.5 0 0 1 15 0M12 10.5V8.5M10.2 8.5h3.6M6 21h12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 19.5c-1.8-1.6-3.5-4.3-3.5-7.5 0-2.3 1.4-4.6 3.5-6.5 2.1 1.9 3.5 4.2 3.5 6.5 0 3.2-1.7 5.9-3.5 7.5zM12 19.5c-3.4 0-7-1.4-9-5 2-.8 4.5-.7 6.2.3M12 19.5c3.4 0 7-1.4 9-5-2-.8-4.5-.7-6.2.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 7v5.2l3.3 2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M12 4a9 9 0 0 1 9 8.5H3A9 9 0 0 1 12 4zM12 2.5V4M12 12.5v6.3a2 2 0 0 1-4 0M3 21h18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.7 15.8a5 5 0 0 1 6.6 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="12" cy="19.2" r="1.1" fill="currentColor"/></symbol>
+
+    <!-- Social icons -->
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 21v-7.5h2.6l.4-3H14V8.7c0-.9.3-1.5 1.6-1.5H17V4.5a19 19 0 0 0-2.3-.1c-2.3 0-3.8 1.4-3.8 3.9v2.2H8.3v3h2.6V21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.2 9.3v5.4l4.6-2.7z" fill="currentColor"/></symbol>
+  </svg>
+
+  <!-- Skip link for keyboard and screen-reader users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==========================================================
+       1. STICKY NAVIGATION
+       ========================================================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Velmora Resort &amp; Spa home">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="logo__text">
+          <span class="logo__name">Velmora</span>
+          <span class="logo__sub">Resort &amp; Spa</span>
+        </span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li style="--i:0"><a class="nav-link is-active" href="#home" aria-current="true">Home</a></li>
+          <li style="--i:1"><a class="nav-link" href="#rooms">Rooms</a></li>
+          <li style="--i:2"><a class="nav-link" href="#experience">Experience</a></li>
+          <li style="--i:3"><a class="nav-link" href="#facilities">Facilities</a></li>
+          <li style="--i:4"><a class="nav-link" href="#about">About</a></li>
+          <li style="--i:5"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <a class="btn btn--nav" href="#booking">Book Your Stay</a>
+
+        <!-- Only visible inside the mobile menu -->
+        <div class="nav-menu__footer">
+          <a href="tel:+94112345678">+94 11 234 5678</a>
+          <a href="mailto:hello@velmora.com">hello@velmora.com</a>
+        </div>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ==========================================================
+         2. HERO
+         ========================================================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img src="assets/images/hero-resort.jpg" alt="Velmora Resort Mirissa at dusk, with an oceanfront terrace and loungers overlooking the bay"
+             width="2000" height="1333" fetchpriority="high">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow eyebrow--light hero__eyebrow">Escape to the extraordinary</p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="line"><span>Where the Ocean</span></span>
+            <span class="line"><span><em>Meets Your Soul</em></span></span>
+          </h1>
+
+          <p class="hero__text">
+            Experience unforgettable stays, breathtaking views, and thoughtful
+            hospitality at Velmora Resort &amp; Spa, on Sri Lanka's southern coast.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--gold" href="#rooms">
+              Explore Rooms
+              <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost-light" href="#experience">Discover the Experience</a>
+          </div>
+        </div>
+
+        <p class="hero__coords" aria-hidden="true">5°56′ N &nbsp;·&nbsp; 80°28′ E &nbsp;—&nbsp; Mirissa, Sri Lanka</p>
+      </div>
+    </section>
+
+    <!-- Booking / availability panel (overlaps the bottom of the hero) -->
+    <section class="booking" id="booking" aria-label="Check availability">
+      <div class="container">
+        <form class="booking__form" id="booking-form" novalidate>
+          <div class="booking__field booking__field--dest">
+            <label for="destination">
+              <svg aria-hidden="true"><use href="#i-pin"/></svg> Destination
+            </label>
+            <select id="destination" name="destination" required>
+              <option value="Velmora Mirissa">Velmora Mirissa</option>
+              <option value="Velmora Galle Fort">Velmora Galle Fort</option>
+            </select>
+          </div>
+
+          <div class="booking__field booking__field--in">
+            <label for="check-in">
+              <svg aria-hidden="true"><use href="#i-calendar"/></svg> Check-in
+            </label>
+            <input type="date" id="check-in" name="checkIn" required>
+          </div>
+
+          <div class="booking__field booking__field--out">
+            <label for="check-out">
+              <svg aria-hidden="true"><use href="#i-calendar"/></svg> Check-out
+            </label>
+            <input type="date" id="check-out" name="checkOut" required>
+          </div>
+
+          <div class="booking__field booking__field--guests">
+            <label for="guests">
+              <svg aria-hidden="true"><use href="#i-user"/></svg> Guests
+            </label>
+            <select id="guests" name="guests">
+              <option value="1 Adult">1 Adult</option>
+              <option value="2 Adults" selected>2 Adults</option>
+              <option value="2 Adults, 1 Child">2 Adults, 1 Child</option>
+              <option value="2 Adults, 2 Children">2 Adults, 2 Children</option>
+              <option value="3 Adults">3 Adults</option>
+              <option value="4 Adults">4 Adults</option>
+            </select>
+          </div>
+
+          <button class="btn btn--dark booking__submit" type="submit">
+            <span class="booking__submit-label">Search Availability</span>
+          </button>
+        </form>
+
+        <div class="booking__meta">
+          <p class="booking__perks">
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> Best rate when you book direct</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> Free cancellation up to 7 days before arrival</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> Complimentary airport transfer for villa stays</span>
+          </p>
+          <p class="booking__status" id="booking-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         3. TRUST / BRAND STATISTICS
+         ========================================================== -->
+    <section class="stats" aria-label="Velmora in numbers">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal">
+            <p class="stat__number" aria-hidden="true"><span class="counter" data-target="12000">12,000</span><span class="stat__suffix">+</span></p>
+            <p class="stat__label"><span class="visually-hidden">12,000+</span> Guests welcomed</p>
+          </div>
+          <div class="stat reveal" style="--delay:.1s">
+            <p class="stat__number" aria-hidden="true"><span class="counter" data-target="28">28</span></p>
+            <p class="stat__label"><span class="visually-hidden">28</span> Suites &amp; villas</p>
+          </div>
+          <div class="stat reveal" style="--delay:.2s">
+            <p class="stat__number" aria-hidden="true"><span class="counter" data-target="15">15</span><span class="stat__suffix">+</span></p>
+            <p class="stat__label"><span class="visually-hidden">15+</span> Years of hospitality</p>
+          </div>
+          <div class="stat reveal" style="--delay:.3s">
+            <p class="stat__number" aria-hidden="true"><span class="counter" data-target="4.9" data-decimals="1">4.9</span><span class="stat__suffix">/5</span></p>
+            <p class="stat__label"><span class="visually-hidden">4.9 out of 5</span> Average guest rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         4. ROOMS
+         ========================================================== -->
+    <section class="section rooms" id="rooms" aria-labelledby="rooms-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__main reveal">
+            <p class="eyebrow">Rooms &amp; Suites</p>
+            <h2 class="section-title" id="rooms-title">Stay Somewhere <em>Extraordinary</em></h2>
+          </div>
+          <div class="section-head__aside reveal" style="--delay:.15s">
+            <p>Thoughtfully designed spaces where comfort meets coastal elegance. Every room faces the water, with natural materials, handwoven textiles and light that changes with the tide.</p>
+          </div>
+        </header>
+
+        <div class="rooms__grid">
+          <!-- Room card 1 -->
+          <article class="room-card reveal">
+            <div class="room-card__media">
+              <img src="assets/images/room-ocean-suite.jpg" alt="Ocean View Suite with a king bed and floor-to-ceiling windows opening onto the sea"
+                   width="1000" height="750" loading="lazy" decoding="async">
+              <span class="room-card__tag">Most requested</span>
+              <p class="room-card__price"><span>From</span> $340 <small>/ night</small></p>
+            </div>
+            <div class="room-card__body">
+              <ul class="room-card__meta" aria-label="Room details">
+                <li>68 m²</li><li>King bed</li><li>Up to 3 guests</li>
+              </ul>
+              <h3 class="room-card__title">Ocean View Suite</h3>
+              <p class="room-card__text">Floor-to-ceiling glass opens onto a private terrace above the Indian Ocean, with a deep soaking tub placed for the sunrise.</p>
+              <a class="link-arrow room-card__link" href="#booking">
+                Explore Suite<span class="visually-hidden">: Ocean View Suite</span>
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Room card 2 -->
+          <article class="room-card reveal" style="--delay:.12s">
+            <div class="room-card__media">
+              <img src="assets/images/room-deluxe-coastal.jpg" alt="Deluxe Coastal Room with teak furniture, white linens and garden-facing windows"
+                   width="1000" height="667" loading="lazy" decoding="async">
+              <p class="room-card__price"><span>From</span> $220 <small>/ night</small></p>
+            </div>
+            <div class="room-card__body">
+              <ul class="room-card__meta" aria-label="Room details">
+                <li>45 m²</li><li>King or twin</li><li>Up to 2 guests</li>
+              </ul>
+              <h3 class="room-card__title">Deluxe Coastal Room</h3>
+              <p class="room-card__text">Warm teak, hand-loomed linens and a shaded balcony overlooking the palm garden and the bay beyond.</p>
+              <a class="link-arrow room-card__link" href="#booking">
+                Explore Room<span class="visually-hidden">: Deluxe Coastal Room</span>
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Room card 3 -->
+          <article class="room-card reveal" style="--delay:.24s">
+            <div class="room-card__media">
+              <img src="assets/images/room-private-villa.jpg" alt="Private Villa deck with sun loungers and a plunge pool facing the ocean"
+                   width="1000" height="667" loading="lazy" decoding="async">
+              <span class="room-card__tag">Private pool</span>
+              <p class="room-card__price"><span>From</span> $620 <small>/ night</small></p>
+            </div>
+            <div class="room-card__body">
+              <ul class="room-card__meta" aria-label="Villa details">
+                <li>140 m²</li><li>2 bedrooms</li><li>Up to 4 guests</li>
+              </ul>
+              <h3 class="room-card__title">Private Villa</h3>
+              <p class="room-card__text">A secluded single-storey villa with its own plunge pool, outdoor rain shower and a dedicated villa host.</p>
+              <a class="link-arrow room-card__link" href="#booking">
+                Explore Villa<span class="visually-hidden">: Private Villa</span>
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         5. EXPERIENCE
+         ========================================================== -->
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
+      <div class="container split">
+        <div class="experience__media reveal">
+          <div class="experience__image">
+            <img src="assets/images/experience-beach-dining.jpg" alt="Thatched beachfront pavilion set for dinner beside calm turquoise water"
+                 width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <div class="experience__caption">
+            <p class="experience__caption-label">Tonight on the beach</p>
+            <p class="experience__caption-title">Private dinner for two</p>
+            <p class="experience__caption-time">Served from 6:30 PM</p>
+          </div>
+        </div>
+
+        <div class="experience__content">
+          <div class="reveal">
+            <p class="eyebrow">Curated Experiences</p>
+            <h2 class="section-title" id="experience-title">More Than <em>a Stay</em></h2>
+            <p class="section-lead">Our guest experience team designs each day around you, from a quiet morning by the water to an afternoon exploring the southern coast with a local guide.</p>
+          </div>
+
+          <ul class="exp-list">
+            <li class="exp-item reveal">
+              <span class="icon-badge"><svg aria-hidden="true"><use href="#i-dining"/></svg></span>
+              <div>
+                <h3 class="exp-item__title">Private Beach Dining</h3>
+                <p>A table set on the sand at dusk, with a menu built around the morning's catch from Mirissa harbour.</p>
+              </div>
+            </li>
+            <li class="exp-item reveal" style="--delay:.08s">
+              <span class="icon-badge"><svg aria-hidden="true"><use href="#i-sail"/></svg></span>
+              <div>
+                <h3 class="exp-item__title">Sunset Cruises</h3>
+                <p>Sail the coastline on our catamaran. From November to April, early departures go out to see the blue whales.</p>
+              </div>
+            </li>
+            <li class="exp-item reveal" style="--delay:.16s">
+              <span class="icon-badge"><svg aria-hidden="true"><use href="#i-sun"/></svg></span>
+              <div>
+                <h3 class="exp-item__title">Wellness &amp; Spa</h3>
+                <p>Sunrise yoga on the ocean deck and Ayurvedic treatments rooted in centuries-old Sri Lankan tradition.</p>
+              </div>
+            </li>
+            <li class="exp-item reveal" style="--delay:.24s">
+              <span class="icon-badge"><svg aria-hidden="true"><use href="#i-compass"/></svg></span>
+              <div>
+                <h3 class="exp-item__title">Island Adventures</h3>
+                <p>Walk the ramparts of Galle Fort, snorkel the Polhena reef or take a day trip to the tea country.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         6. FACILITIES
+         ========================================================== -->
+    <section class="section facilities" id="facilities" aria-labelledby="facilities-title">
+      <div class="container">
+        <header class="section-head section-head--center reveal">
+          <p class="eyebrow eyebrow--light">Resort Facilities</p>
+          <h2 class="section-title" id="facilities-title">Every Comfort, <em>Considered</em></h2>
+          <p class="section-lead">Everything you need, all within a short walk of your room and the sea.</p>
+        </header>
+
+        <ul class="facility-grid">
+          <li class="facility reveal">
+            <span class="facility__index" aria-hidden="true">01</span>
+            <svg class="facility__icon" aria-hidden="true"><use href="#i-pool"/></svg>
+            <h3 class="facility__title">Infinity Pool</h3>
+            <p>A 40-metre saltwater pool that meets the horizon, with shaded cabanas and poolside service until sunset.</p>
+          </li>
+          <li class="facility reveal" style="--delay:.08s">
+            <span class="facility__index" aria-hidden="true">02</span>
+            <svg class="facility__icon" aria-hidden="true"><use href="#i-cloche"/></svg>
+            <h3 class="facility__title">Fine Dining</h3>
+            <p>Two restaurants serving refined Sri Lankan and coastal Mediterranean cuisine, made with produce from local farms.</p>
+          </li>
+          <li class="facility reveal" style="--delay:.16s">
+            <span class="facility__index" aria-hidden="true">03</span>
+            <svg class="facility__icon" aria-hidden="true"><use href="#i-lotus"/></svg>
+            <h3 class="facility__title">Spa &amp; Wellness</h3>
+            <p>Six open-air treatment pavilions set in a tropical garden, offering Ayurvedic rituals and modern therapies.</p>
+          </li>
+          <li class="facility reveal">
+            <span class="facility__index" aria-hidden="true">04</span>
+            <svg class="facility__icon" aria-hidden="true"><use href="#i-clock"/></svg>
+            <h3 class="facility__title">24/7 Concierge</h3>
+            <p>Airport transfers, private tours and last-minute reservations, arranged by our team at any hour.</p>
+          </li>
+          <li class="facility reveal" style="--delay:.08s">
+            <span class="facility__index" aria-hidden="true">05</span>
+            <svg class="facility__icon" aria-hidden="true"><use href="#i-umbrella"/></svg>
+            <h3 class="facility__title">Private Beach</h3>
+            <p>A quiet stretch of golden sand reserved for guests, with loungers, towels and chilled refreshments.</p>
+          </li>
+          <li class="facility reveal" style="--delay:.16s">
+            <span class="facility__index" aria-hidden="true">06</span>
+            <svg class="facility__icon" aria-hidden="true"><use href="#i-wifi"/></svg>
+            <h3 class="facility__title">Free Wi-Fi</h3>
+            <p>Fast, reliable connectivity across the resort, including the beach, pool deck and every villa.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         7. FULL-WIDTH CINEMATIC VISUAL (parallax)
+         ========================================================== -->
+    <section class="visual" aria-labelledby="visual-title">
+      <div class="visual__media" data-parallax="0.12">
+        <img src="assets/images/parallax-sunrise.jpg" alt="" width="2000" height="1330" loading="lazy" decoding="async">
+      </div>
+      <div class="container visual__content reveal">
+        <p class="eyebrow eyebrow--light eyebrow--center">Sunrise at Mirissa Bay</p>
+        <h2 class="visual__title" id="visual-title">Wake Up <em>to the Ocean</em></h2>
+        <p class="visual__text">Every morning deserves a view worth remembering.</p>
+        <a class="btn btn--ghost-light" href="#about">
+          Explore Velmora
+          <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         8. ABOUT
+         ========================================================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="about__image about__image--main">
+            <img src="assets/images/about-main.jpg" alt="Palm-fringed resort pool surrounded by thatched pavilions and green hills"
+                 width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <div class="about__image about__image--small">
+            <img src="assets/images/about-dining.jpg" alt="Plated dish of fresh seafood served at the Velmora restaurant"
+                 width="700" height="467" loading="lazy" decoding="async">
+          </div>
+          <p class="about__badge" aria-hidden="true"><span>Est.</span>2011</p>
+        </div>
+
+        <div class="about__content">
+          <div class="reveal">
+            <p class="eyebrow">Our Story</p>
+            <h2 class="section-title" id="about-title">Designed Around <em>Your Escape</em></h2>
+            <p class="about__lead">Velmora began in 2011 as a six-room guesthouse on the Mirissa shoreline, built on one simple idea: the best escapes are the ones that feel personal.</p>
+            <p>Today we welcome travellers from more than sixty countries to two coastal properties on Sri Lanka's southern coast. We have stayed deliberately small. Fewer rooms mean our team knows every guest by name, our kitchens cook with what the local fishermen and farmers bring in each morning, and every space is designed to be quiet.</p>
+            <p>Our architecture draws on Geoffrey Bawa's tropical modernism: open pavilions, local stone and timber, and courtyards that let the sea breeze through.</p>
+          </div>
+
+          <dl class="about__details reveal" style="--delay:.1s">
+            <div>
+              <dt>Properties</dt>
+              <dd>2</dd>
+            </div>
+            <div>
+              <dt>Local team members</dt>
+              <dd>120+</dd>
+            </div>
+            <div>
+              <dt>Local produce</dt>
+              <dd>85%</dd>
+            </div>
+          </dl>
+
+          <figure class="about__quote reveal" style="--delay:.15s">
+            <blockquote>
+              <p>“We never set out to build the biggest resort on the coast, only the one our guests remember.”</p>
+            </blockquote>
+            <figcaption>Nadeesha Fernando, <span>Founder</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         9. TESTIMONIALS
+         ========================================================== -->
+    <section class="section testimonials" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head section-head--center reveal">
+          <p class="eyebrow eyebrow--center">Guest Stories</p>
+          <h2 class="section-title" id="reviews-title">In Their <em>Own Words</em></h2>
+          <p class="rating-summary">
+            <span class="stars" aria-hidden="true">
+              <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+            </span>
+            <strong>4.9 out of 5</strong> from 1,200+ verified guest reviews
+          </p>
+        </header>
+
+        <div class="testimonial-grid" tabindex="0" aria-label="Guest reviews">
+          <figure class="testimonial reveal">
+            <p class="stars" role="img" aria-label="Rated 5 out of 5">
+              <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+            </p>
+            <blockquote class="testimonial__quote">
+              <p>Every detail felt thoughtfully designed. The ocean view at sunrise was unforgettable, and by the second morning the staff already knew how we take our coffee.</p>
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <span class="avatar" aria-hidden="true">AH</span>
+              <span>
+                <strong>Amelia Hartley</strong>
+                <span>London, United Kingdom</span>
+              </span>
+            </figcaption>
+            <p class="testimonial__stay">Ocean View Suite · March 2026</p>
+          </figure>
+
+          <figure class="testimonial reveal" style="--delay:.12s">
+            <p class="stars" role="img" aria-label="Rated 5 out of 5">
+              <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+            </p>
+            <blockquote class="testimonial__quote">
+              <p>We came for our anniversary and stayed in one of the villas. Quiet, beautifully kept, and the dinner on the beach was the best evening of our trip.</p>
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <span class="avatar" aria-hidden="true">KP</span>
+              <span>
+                <strong>Kavindu &amp; Shehani Perera</strong>
+                <span>Colombo, Sri Lanka</span>
+              </span>
+            </figcaption>
+            <p class="testimonial__stay">Private Villa · January 2026</p>
+          </figure>
+
+          <figure class="testimonial reveal" style="--delay:.24s">
+            <p class="stars" role="img" aria-label="Rated 4 out of 5">
+              <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg class="is-empty" aria-hidden="true"><use href="#i-star"/></svg>
+            </p>
+            <blockquote class="testimonial__quote">
+              <p>A calm, well-run resort with genuinely warm staff. The whale-watching trip meant a 6 AM start but was worth it. My only regret is not booking more nights.</p>
+            </blockquote>
+            <figcaption class="testimonial__author">
+              <span class="avatar" aria-hidden="true">LB</span>
+              <span>
+                <strong>Lukas Brenner</strong>
+                <span>Munich, Germany</span>
+              </span>
+            </figcaption>
+            <p class="testimonial__stay">Deluxe Coastal Room · February 2026</p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         10. FINAL CALL TO ACTION
+         ========================================================== -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta__media" data-parallax="0.1">
+        <img src="assets/images/cta-infinity-pool.jpg" alt="" width="1800" height="1201" loading="lazy" decoding="async">
+      </div>
+      <div class="container cta__content reveal">
+        <p class="eyebrow eyebrow--light eyebrow--center">Reservations Open for 2027</p>
+        <h2 class="cta__title" id="cta-title">Your Escape <em>Is Waiting</em></h2>
+        <p class="cta__text">Leave the ordinary behind and discover a stay designed around you.</p>
+        <div class="cta__actions">
+          <a class="btn btn--gold" href="#booking">
+            Book Your Stay
+            <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="cta__phone" href="tel:+94112345678">
+            <svg aria-hidden="true"><use href="#i-phone"/></svg>
+            or call +94 11 234 5678
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       11. FOOTER
+       ========================================================== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo logo--light" href="#home" aria-label="Velmora Resort &amp; Spa home">
+            <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+            <span class="logo__text">
+              <span class="logo__name">Velmora</span>
+              <span class="logo__sub">Resort &amp; Spa</span>
+            </span>
+          </a>
+          <p class="footer__tagline">Luxury stays inspired by the coast.</p>
+          <ul class="socials" aria-label="Velmora on social media">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+          </ul>
+        </div>
+
+        <nav class="footer__col" aria-label="Quick links">
+          <h2 class="footer__heading">Quick Links</h2>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#experience">Experiences</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact</h2>
+          <address class="footer__contact">
+            <p><svg aria-hidden="true"><use href="#i-pin"/></svg> Colombo, Sri Lanka</p>
+            <p><svg aria-hidden="true"><use href="#i-phone"/></svg> <a href="tel:+94112345678">+94 11 234 5678</a></p>
+            <p><svg aria-hidden="true"><use href="#i-mail"/></svg> <a href="mailto:hello@velmora.com">hello@velmora.com</a></p>
+          </address>
+        </div>
+
+        <div class="footer__col footer__newsletter">
+          <h2 class="footer__heading">Stay in Touch</h2>
+          <p>Seasonal offers and stories from the coast, a few times a year.</p>
+          <form class="newsletter" id="newsletter-form" novalidate>
+            <label class="visually-hidden" for="newsletter-email">Email address</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="Your email address" autocomplete="email" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+          </form>
+          <p class="newsletter__status" id="newsletter-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> Velmora Resort &amp; Spa. All rights reserved.</p>
+        <ul class="footer__legal">
+          <li><a href="#home">Privacy Policy</a></li>
+          <li><a href="#home">Terms of Stay</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
